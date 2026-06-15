@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Guide · Jessica's Birthday Celebration 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1C2740;--navy-2:#243352;--blue:#3A5277;--blue-soft:#6E83A6;
+    --terra:#C26B4C;--terra-soft:#D89A7E;--gold:#C9A86A;--gold-soft:#E2CC9A;
+    --paper:#F5F0E8;--card:#FBF8F2;--white:#FFFFFF;--ink:#2A3245;--ink-soft:#5C6477;
+    --rule:rgba(58,82,119,.15);--sand:#EFE4D6;
+    --shadow:0 1px 0 rgba(28,39,64,.04), 0 16px 34px -26px rgba(28,39,64,.4);
+    --maxw:1000px;
+    --display:"Unbounded",system-ui,-apple-system,sans-serif;
+    --text:"Outfit",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .spark{position:absolute;pointer-events:none;fill:var(--gold)}
+  .spark.w{fill:rgba(255,255,255,.85)}
+  .spark.t{fill:var(--terra-soft)}
+  @keyframes tw{0%,100%{opacity:.42;transform:scale(.82)}50%{opacity:1;transform:scale(1.08)}}
+  @media (prefers-reduced-motion:no-preference){
+    .spark{opacity:.5;animation:tw 4.2s ease-in-out infinite}
+    .s1{animation-delay:0s}.s2{animation-delay:.7s}.s3{animation-delay:1.4s}.s4{animation-delay:2.1s}.s5{animation-delay:.5s}
+    .reveal{opacity:0;transform:translateY(15px)}
+    .reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+  }
+  @media (prefers-reduced-motion:reduce){ .spark{opacity:.85} }
+
+  .hero{position:relative;overflow:hidden;background:var(--navy);color:#fff;text-align:center}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--terra),var(--gold),transparent);z-index:3}
+  .ghost{position:absolute;inset:0;background:url("photos/portugal.webp") center/cover;opacity:.1;mix-blend-mode:soft-light;filter:grayscale(.4) saturate(.85);pointer-events:none;z-index:0}
+  .hero-inner{position:relative;z-index:2;padding:48px 24px 44px}
+  .back{display:inline-block;font-family:var(--text);font-weight:600;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);text-decoration:none;margin-bottom:18px}
+  .back:hover{color:#fff}
+  .hero-kicker{font-family:var(--text);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--blue-soft)}
+  .hero-title{font-family:var(--display);font-weight:700;font-size:clamp(30px,5.4vw,52px);line-height:1.02;letter-spacing:-.015em;margin:.32em 0 .3em;color:#fff}
+  .hero-title .g{color:var(--gold)}
+  .hero-sub{font-family:var(--text);font-weight:400;font-size:clamp(14px,1.9vw,17px);max-width:48ch;margin:0 auto;color:rgba(255,255,255,.8)}
+
+  .venue{padding:36px 0 4px}
+  .venue-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 5px}
+  .venue-h .star{color:var(--gold);font-size:15px}
+  .venue-h h2{font-family:var(--display);font-weight:700;font-size:clamp(20px,3vw,27px);letter-spacing:-.015em;color:var(--ink);margin:0}
+  .venue-when{font-family:var(--text);font-weight:700;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--terra)}
+  .venue-sub{color:var(--ink-soft);font-size:14px;margin:0 0 20px;max-width:60ch}
+  .vbanner{position:relative;border-radius:16px;overflow:hidden;min-height:208px;display:flex;align-items:flex-end;box-shadow:var(--shadow);margin:0 0 20px;background:var(--navy) center/cover no-repeat}
+  .vbanner::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(28,39,64,.9),rgba(28,39,64,.55) 48%,rgba(28,39,64,.12));z-index:1}
+  .vbanner::before{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--terra),var(--gold),transparent);z-index:2}
+  .vbanner .vb-in{position:relative;z-index:3;padding:24px 28px}
+  .vbanner .venue-when{color:var(--gold-soft)}
+  .vbanner h2{font-family:var(--display);font-weight:700;font-size:clamp(23px,3.4vw,34px);letter-spacing:-.015em;color:#fff;margin:6px 0 0}
+  .vbanner .venue-sub{color:rgba(255,255,255,.86);margin:9px 0 0;max-width:56ch}
+  .spots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+  .spot{display:block;text-decoration:none;background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:15px 18px 16px;box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+  .spot:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 30px -20px rgba(28,39,64,.5)}
+  .tag{display:inline-block;font-family:var(--text);font-weight:700;font-size:10px;letter-spacing:.13em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+  .tag.dine{background:rgba(58,82,119,.12);color:var(--blue)}
+  .tag.drinks{background:rgba(194,107,76,.15);color:var(--terra)}
+  .tag.treat{background:rgba(201,168,106,.22);color:#94762F}
+  .tag.play{background:rgba(28,39,64,.09);color:var(--navy)}
+  .spot .name{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink);margin:11px 0 5px;letter-spacing:-.01em;display:flex;align-items:center;gap:7px;line-height:1.2}
+  .spot .name .go{color:var(--blue-soft);font-size:12px;flex:0 0 auto;transition:transform .25s ease}
+  .spot:hover .name .go{transform:translate(2px,-2px)}
+  .spot .blurb{font-size:13.5px;color:var(--ink-soft);line-height:1.45}
+  .spot .rate{font-family:var(--text);font-weight:700;font-size:12px;color:var(--terra);margin-top:9px;letter-spacing:.02em;display:flex;align-items:center;gap:5px}
+  .spot .rate .dot{color:var(--blue-soft);font-weight:400}
+
+  footer{position:relative;overflow:hidden;background:var(--navy);color:#fff;margin-top:38px;text-align:center}
+  footer::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--terra),var(--gold),transparent)}
+  .foot-inner{position:relative;z-index:2;padding:36px 24px 32px}
+  .foot-inner a{font-family:var(--text);font-weight:700;font-size:13.5px;letter-spacing:.02em;color:var(--navy);background:var(--gold);padding:11px 20px;border-radius:999px;text-decoration:none;display:inline-block}
+  .foot-meta{margin-top:20px;font-family:var(--text);font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--blue-soft)}
+  .foot-meta .bc{color:rgba(255,255,255,.85)}
+  .note{font-size:12px;color:var(--ink-soft);text-align:center;padding:18px 24px 0;max-width:70ch;margin:0 auto}
+
+  @media (max-width:700px){ .spots{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="spk" viewBox="0 0 24 24"><path d="M12 0C12 6 18 12 24 12C18 12 12 18 12 24C12 18 6 12 0 12C6 12 12 6 12 0Z"/></symbol></svg>
+
+<header class="hero">
+  <div class="ghost" aria-hidden="true"></div>
+  <svg class="spark s1" style="width:24px;top:34px;left:14%"><use href="#spk"/></svg>
+  <svg class="spark w s2" style="width:14px;top:70px;left:28%"><use href="#spk"/></svg>
+  <svg class="spark t s3" style="width:18px;bottom:36px;left:20%"><use href="#spk"/></svg>
+  <svg class="spark s4" style="width:26px;top:40px;right:14%"><use href="#spk"/></svg>
+  <svg class="spark w s5" style="width:13px;bottom:46px;right:24%"><use href="#spk"/></svg>
+  <div class="wrap hero-inner">
+    <a class="back" href="./index.html">← Back to the itinerary</a>
+    <div class="hero-kicker">Jessica's Birthday Celebration 2026</div>
+    <h1 class="hero-title">Eat &amp; Play <span class="g">Guide</span></h1>
+    <p class="hero-sub">Twenty hand-picked tables, treats and things to do — minutes from each stop. Tap any spot to open it in maps.</p>
+  </div>
+</header>
+
+<section class="venue">
+  <div class="wrap">
+    <div class="vbanner" style="background-image:url('photos/publick.webp')">
+      <div class="vb-in">
+        <span class="venue-when">Night 1</span>
+        <h2>Sturbridge, MA</h2>
+        <p class="venue-sub">Your first night, all within minutes of the Publick House.</p>
+      </div>
+    </div>
+    <div class="spots">
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cedar%20Street%20Grille%20Sturbridge%20MA&query_place_id=ChIJV6_5ywej5okRaxeQs1ZA0Y4">
+        <span class="tag dine">Dine</span>
+        <div class="name">Cedar Street Grille <span class="go">↗</span></div>
+        <div class="blurb">Unassuming room, ambitious New American small plates and a rotating butter worth the trip.</div>
+        <div class="rate">✦ 4.5 <span class="dot">· 1,205 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Condesa%20Restaurante%20Sturbridge%20MA&query_place_id=ChIJX8dbhoqj5okRM8gcw7u1tqs">
+        <span class="tag dine">Dine</span>
+        <div class="name">Condesa Restaurante <span class="go">↗</span></div>
+        <div class="blurb">Stylish modern Mexican with standout tequila cocktails — a surprise gem in a strip mall.</div>
+        <div class="rate">✦ 4.6 <span class="dot">· 661 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Angelina%27s%20Fiskdale%20MA&query_place_id=ChIJk6c9g1qj5okRglODaU5YA_Q">
+        <span class="tag drinks">Drinks &amp; Dine</span>
+        <div class="name">Angelina's <span class="go">↗</span></div>
+        <div class="blurb">A tiny Italian kitchen where the craft-cocktail list is the real star. Whimsical and very good.</div>
+        <div class="rate">✦ 4.6 <span class="dot">· in Fiskdale</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Old%20Sturbridge%20Village&query_place_id=ChIJWZB6TKqj5okRUEf_Ppi-mBI">
+        <span class="tag play">Play</span>
+        <div class="name">Old Sturbridge Village <span class="go">↗</span></div>
+        <div class="blurb">An 1830s living-history village right next door — a slow, lovely morning before Hartford.</div>
+        <div class="rate">✦ 4.7 <span class="dot">· 4,861 reviews</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="venue">
+  <div class="wrap">
+    <div class="vbanner" style="background-image:url('photos/g-show.webp')">
+      <div class="vb-in">
+        <span class="venue-when">Night 2 · The Show</span>
+        <h2>Hartford, CT</h2>
+        <p class="venue-sub">Dinner downtown before Billy Strings, a nightcap after — then a quick Lyft back to your Hartford Airbnb.</p>
+      </div>
+    </div>
+    <div class="spots">
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Max%20Downtown%20Hartford%20CT&query_place_id=ChIJ5ZXjk2RT5okRYnfbR2hC_bA">
+        <span class="tag dine">Dine</span>
+        <div class="name">Max Downtown <span class="go">↗</span></div>
+        <div class="blurb">The polished downtown steakhouse — the obvious pick for the big pre-show dinner.</div>
+        <div class="rate">✦ 4.5 <span class="dot">· 969 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Trumbull%20Kitchen%20Hartford%20CT&query_place_id=ChIJtX7NvmRT5okRnRAJCbY8aUo">
+        <span class="tag dine">Dine</span>
+        <div class="name">Trumbull Kitchen <span class="go">↗</span></div>
+        <div class="blurb">Eclectic small plates, a buzzy room, and cocktails locals rave about.</div>
+        <div class="rate">✦ 4.4 <span class="dot">· 1,209 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Fire%20by%20Forge%20Hartford%20CT&query_place_id=ChIJJ8ycGGdT5okRsT6-tJ0pfSE">
+        <span class="tag dine">Dine</span>
+        <div class="name">Fire by Forge <span class="go">↗</span></div>
+        <div class="blurb">Wood-fired, farm-to-table cooking from a nonprofit with a good-for-the-neighborhood ethos.</div>
+        <div class="rate">✦ 4.5 <span class="dot">· 562 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=The%20Foundry%20Hartford%20CT&query_place_id=ChIJs1MVPOZT5okRi8N8Ba5xWWs">
+        <span class="tag dine">Dine · View</span>
+        <div class="name">The Foundry <span class="go">↗</span></div>
+        <div class="blurb">Twentieth-floor fine dining with sweeping skyline and Capitol views. Book ahead for the window.</div>
+        <div class="rate">✦ 4.1 <span class="dot">· special occasion</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hartford%20Flavor%20Cocktail%20Parlour&query_place_id=ChIJq5r8dglT5okRigsw8TXlLZw">
+        <span class="tag drinks">Drinks</span>
+        <div class="name">Hartford Flavor Parlour <span class="go">↗</span></div>
+        <div class="blurb">Botanical craft cocktails on pretty pedestrian Pratt Street — a lush, pre-show kind of place.</div>
+        <div class="rate">✦ 4.5 <span class="dot">· on Pratt St</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=L%20Bar%20Hartford%20CT%20Columbus%20Blvd&query_place_id=ChIJcxjsMHpT5okRBwxqfUSgngE">
+        <span class="tag drinks">Drinks</span>
+        <div class="name">L Bar <span class="go">↗</span></div>
+        <div class="blurb">A 22nd-floor nightcap over the city — go for the view and an after-show drink.</div>
+        <div class="rate">✦ 4.1 <span class="dot">· skyline bar</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="venue">
+  <div class="wrap">
+    <div class="vbanner" style="background-image:url('photos/g-boston.webp')">
+      <div class="vb-in">
+        <span class="venue-when">Nights 3–4</span>
+        <h2>Boston, MA</h2>
+        <p class="venue-sub">Two nights by the harbor — the North End, Faneuil Hall and the waterfront are all on foot from the Harborside.</p>
+      </div>
+    </div>
+    <div class="spots">
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Mamma%20Maria%20North%20End%20Boston&query_place_id=ChIJVbrdD4lw44kRdZLKJo0e02o">
+        <span class="tag dine">Dine</span>
+        <div class="name">Mamma Maria <span class="go">↗</span></div>
+        <div class="blurb">Romantic, upscale North End in a candlelit townhouse on North Square — the birthday-dinner pick.</div>
+        <div class="rate">✦ 4.7 <span class="dot">· 2,146 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Carmelina%27s%20North%20End%20Boston&query_place_id=ChIJCTK0bYlw44kRZYlFMM9e3jg">
+        <span class="tag dine">Dine</span>
+        <div class="name">Carmelina's <span class="go">↗</span></div>
+        <div class="blurb">Michelin-recognized Hanover Street Italian — bold, generous, no-reservations energy.</div>
+        <div class="rate">✦ 4.6 <span class="dot">· 2,823 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Prezza%20North%20End%20Boston&query_place_id=ChIJcRpJ3cVx44kRw6Kz5WQgucc">
+        <span class="tag dine">Dine</span>
+        <div class="name">Prezza <span class="go">↗</span></div>
+        <div class="blurb">Refined North End cooking and a deep wine list — grilled octopus and lobster fra diavolo shine.</div>
+        <div class="rate">✦ 4.6 <span class="dot">· 715 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=La%20Famiglia%20Giorgio%27s%20Boston&query_place_id=ChIJv7k_M4lw44kRuVhaTg8i9UQ">
+        <span class="tag dine">Dine</span>
+        <div class="name">La Famiglia Giorgio's <span class="go">↗</span></div>
+        <div class="blurb">Classic, enormous-portion red-sauce Italian on Salem Street. Come hungry, share everything.</div>
+        <div class="rate">✦ 4.4 <span class="dot">· 3,335 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Mike%27s%20Pastry%20North%20End%20Boston&query_place_id=ChIJs0kxSjWo4okR6109vVboQ64">
+        <span class="tag treat">Treat</span>
+        <div class="name">Mike's Pastry <span class="go">↗</span></div>
+        <div class="blurb">The legendary cannoli line on Hanover. Worth it once — go early, bring cash.</div>
+        <div class="rate">✦ 4.3 <span class="dot">· 6,231 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Modern%20Pastry%20Shop%20Boston&query_place_id=ChIJT6uL2Yhw44kRQC4VpTehlhs">
+        <span class="tag treat">Treat</span>
+        <div class="name">Modern Pastry Shop <span class="go">↗</span></div>
+        <div class="blurb">The locals' cannoli — shells filled to order, with a cozy café to actually sit and savor.</div>
+        <div class="rate">✦ 4.5 <span class="dot">· 2,610 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Faneuil%20Hall%20Marketplace%20Boston&query_place_id=ChIJpyiwa4Zw44kRBQSGWKv4wgA">
+        <span class="tag play">Play</span>
+        <div class="name">Faneuil Hall Marketplace <span class="go">↗</span></div>
+        <div class="blurb">Street performers, the Quincy Market food hall and shops — the lively heart of downtown.</div>
+        <div class="rate">✦ 4.5 <span class="dot">· steps away</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Museum%20of%20Illusions%20Boston%20State%20St&query_place_id=ChIJLwYOQ0lx44kRCRT7HB0zn8Q">
+        <span class="tag play">Play</span>
+        <div class="name">Museum of Illusions <span class="go">↗</span></div>
+        <div class="blurb">Playful illusion rooms and great photo ops — and it's a block from the hotel on State Street.</div>
+        <div class="rate">✦ 4.6 <span class="dot">· 1,132 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Classic%20Harbor%20Line%20Boston%20Rowes%20Wharf&query_place_id=ChIJRzwXWodw44kRLuhj8u38D24">
+        <span class="tag play">Play</span>
+        <div class="name">Classic Harbor Line Sail <span class="go">↗</span></div>
+        <div class="blurb">A two-hour sunset sail on a classic schooner from Rowes Wharf — the romantic evening move.</div>
+        <div class="rate">✦ 4.8 <span class="dot">· 559 reviews</span></div>
+      </a>
+      <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Apex%20Rooftop%20Bar%20and%20Lounge%20Boston%20State%20St&query_place_id=ChIJ2XHkQoZw44kRuMIaSkTas9E">
+        <span class="tag drinks">Drinks</span>
+        <div class="name">Apex Rooftop Bar <span class="go">↗</span></div>
+        <div class="blurb">Rooftop cocktails next door at 150 State Street — the easiest, prettiest nightcap of the trip.</div>
+        <div class="rate">✦ 4.8 <span class="dot">· 1,279 reviews</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<p class="note">Hours and availability change — tap through to confirm before you go, and reserve the North End and steakhouse tables ahead, especially on a weekend.</p>
+
+<footer>
+  <svg class="spark s1" style="width:22px;top:24px;left:20%"><use href="#spk"/></svg>
+  <svg class="spark w s4" style="width:13px;bottom:34px;right:24%"><use href="#spk"/></svg>
+  <svg class="spark t s3" style="width:16px;top:42px;right:18%"><use href="#spk"/></svg>
+  <div class="wrap foot-inner">
+    <a href="./index.html">← Back to the itinerary</a>
+    <div class="foot-meta"><span class="bc">A Black Cloud production</span> · Jun 2026</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    if(!('IntersectionObserver' in window)) return;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  })();
+</script>
+</body>
+</html>
