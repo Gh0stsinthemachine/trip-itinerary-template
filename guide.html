@@ -40,7 +40,7 @@
   .hero-inner{position:relative;z-index:2;padding:48px 24px 44px}
   .back{display:inline-block;font-family:var(--text);font-weight:600;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);text-decoration:none;margin-bottom:18px}
   .back:hover{color:#fff}
-  .hero-kicker{font-family:var(--text);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--blue-soft)}
+  .hero-kicker{font-family:var(--text);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--terra-soft)}
   .hero-title{font-family:var(--display);font-weight:700;font-size:clamp(30px,5.4vw,52px);line-height:1.02;letter-spacing:-.015em;margin:.32em 0 .3em;color:#fff}
   .hero-title .g{color:var(--gold)}
   .hero-sub{font-family:var(--text);font-weight:400;font-size:clamp(14px,1.9vw,17px);max-width:48ch;margin:0 auto;color:rgba(255,255,255,.8)}
@@ -67,6 +67,15 @@
   .tag.drinks{background:rgba(194,107,76,.15);color:var(--terra)}
   .tag.treat{background:rgba(201,168,106,.22);color:#94762F}
   .tag.play{background:rgba(28,39,64,.09);color:var(--navy)}
+  .tag.book{background:var(--gold);color:var(--navy)}
+  .tag.live{background:var(--terra);color:#fff}
+  .subhead{font-family:var(--text);font-weight:700;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin:26px 0 13px;display:flex;align-items:center;gap:12px}
+  .subhead::after{content:"";flex:1;height:1px;background:var(--rule)}
+  .subhead .free{color:var(--blue-soft);font-weight:600;letter-spacing:.04em;text-transform:none;font-size:12.5px}
+  .spot.booked{grid-column:1/-1;border-color:rgba(201,168,106,.6);background:linear-gradient(180deg,rgba(201,168,106,.1),var(--card) 60%)}
+  .spot.booked .name{color:var(--navy)}
+  .spot.booked .resv{display:inline-flex;align-items:center;gap:6px;font-family:var(--text);font-weight:700;font-size:12px;color:#94762F;margin-top:9px;letter-spacing:.02em}
+  .spot.booked .resv svg{width:13px;height:13px;stroke:#94762F}
   .spot .name{font-family:var(--display);font-weight:600;font-size:16px;color:var(--ink);margin:11px 0 5px;letter-spacing:-.01em;display:flex;align-items:center;gap:7px;line-height:1.2}
   .spot .name .go{color:var(--blue-soft);font-size:12px;flex:0 0 auto;transition:transform .25s ease}
   .spot:hover .name .go{transform:translate(2px,-2px)}
@@ -98,9 +107,9 @@
   <svg class="spark w s5" style="width:13px;bottom:46px;right:24%"><use href="#spk"/></svg>
   <div class="wrap hero-inner">
     <a class="back" href="./index.html">← Back to the itinerary</a>
-    <div class="hero-kicker">Jessica's Birthday Celebration 2026</div>
-    <h1 class="hero-title">Eat &amp; Play <span class="g">Guide</span></h1>
-    <p class="hero-sub">Twenty hand-picked tables, treats and things to do — minutes from each stop. Tap any spot to open it in maps.</p>
+    <div class="hero-kicker">A Celebration · July 27 – 31, 2026</div>
+    <h1 class="hero-title">In Celebration of <span class="g">Jessica</span></h1>
+    <p class="hero-sub">Anchored by a night with Billy Strings — from the colonial taverns of old Sturbridge to the world-class tables and stages of new Boston. Here's every spot worth the trip.</p>
   </div>
 </header>
 
@@ -202,10 +211,16 @@
       </div>
     </div>
     <div class="spots">
+      <a class="spot booked reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rowes%20Wharf%20Sea%20Grille%20Boston">
+        <span class="tag book">Reserved · The Birthday Dinner</span>
+        <div class="name">Rowes Wharf Sea Grille <span class="go">↗</span></div>
+        <div class="blurb">The last-night dinner — harbor-view seafood at the Boston Harbor Hotel, oysters to start, a short walk down the waterfront from the Harborside.</div>
+        <div class="resv"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Thursday, July 30 · 8:00 PM · table for two</div>
+      </a>
       <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Mamma%20Maria%20North%20End%20Boston&query_place_id=ChIJVbrdD4lw44kRdZLKJo0e02o">
         <span class="tag dine">Dine</span>
         <div class="name">Mamma Maria <span class="go">↗</span></div>
-        <div class="blurb">Romantic, upscale North End in a candlelit townhouse on North Square — the birthday-dinner pick.</div>
+        <div class="blurb">Romantic, upscale North End in a candlelit townhouse on North Square — a lovely alternate if plans shift.</div>
         <div class="rate">✦ 4.7 <span class="dot">· 2,146 reviews</span></div>
       </a>
       <a class="spot reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Carmelina%27s%20North%20End%20Boston&query_place_id=ChIJCTK0bYlw44kRZYlFMM9e3jg">
@@ -262,6 +277,15 @@
         <div class="blurb">Rooftop cocktails next door at 150 State Street — the easiest, prettiest nightcap of the trip.</div>
         <div class="rate">✦ 4.8 <span class="dot">· 1,279 reviews</span></div>
       </a>
+    </div>
+    <div class="subhead">Wednesday night <span class="free">your birthday — kept open on purpose</span></div>
+    <div class="spots">
+      <div class="spot booked reveal">
+        <span class="tag book">Wednesday · 7/29 · The Birthday</span>
+        <div class="name">Leave the evening free</div>
+        <div class="blurb">Your birthday night is a surprise. Wear something easy for being outside, don't make other plans — and trust me on this one.</div>
+        <div class="resv"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Handled · just say yes</div>
+      </div>
     </div>
   </div>
 </section>

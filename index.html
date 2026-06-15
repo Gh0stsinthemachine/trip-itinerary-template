@@ -72,11 +72,18 @@
   .gnote .m{font-family:var(--display);font-weight:600;font-size:clamp(16px,2.2vw,21px);line-height:1.25;letter-spacing:-.01em;color:#fff;margin-top:7px}
   .gnote .m .o{color:var(--gold)}
   .hero-inner{position:relative;z-index:2;padding:60px 24px 56px}
-  .hero-kicker{font-family:var(--text);font-weight:600;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-soft)}
+  .hero-kicker{font-family:var(--text);font-weight:600;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--terra-soft)}
   .hero-title{font-family:var(--display);font-weight:700;font-size:clamp(34px,6.4vw,68px);line-height:1.04;letter-spacing:-.015em;margin:.42em 0 .34em;color:#fff}
   .hero-title .yr{color:var(--gold);display:inline-block}
-  .hero-sub{font-family:var(--text);font-weight:400;font-size:clamp(15px,2vw,18px);max-width:46ch;margin:0 auto;color:rgba(255,255,255,.8)}
+  .hero-sub{font-family:var(--text);font-weight:400;font-size:clamp(15px,2vw,18px);max-width:58ch;margin:0 auto;color:rgba(255,255,255,.8)}
   .hero-route{margin-top:20px;font-family:var(--text);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-soft)}
+
+  /* ---------- dedication ---------- */
+  .dedi{max-width:660px;margin:0 auto;text-align:center;padding:6px 0}
+  .dedi-star{display:block;color:var(--terra);font-size:15px;margin-bottom:18px}
+  .dedi-body{font-family:var(--text);font-weight:400;font-size:clamp(18px,2.7vw,24px);line-height:1.62;letter-spacing:-.005em;color:var(--ink);margin:0}
+  .dedi-body .em{font-weight:600;color:var(--terra)}
+  .dedi-rule{width:34px;height:1px;background:var(--gold);margin:22px auto 0;opacity:.7}
 
   /* ---------- section scaffold ---------- */
   .section{padding:38px 0}
@@ -84,7 +91,7 @@
   .sec-h{font-family:var(--text);font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin:0 0 20px;display:flex;align-items:center;gap:12px}
   .sec-h::before{content:"";width:14px;height:14px;flex:0 0 auto}
   .sec-h::after{content:"";flex:1;height:1px;background:var(--rule)}
-  .sec-star{color:var(--gold)}
+  .sec-star{color:var(--terra)}
 
   /* ---------- journey ribbon ---------- */
   .ribbon{display:flex;align-items:flex-start;flex-wrap:nowrap}
@@ -150,7 +157,7 @@
   .cta a:hover .ar{transform:translateX(4px)}
 
   /* ---------- logistics ---------- */
-  .logi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .logi{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
   .lcard{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
   .lcard h4{font-family:var(--display);font-weight:600;font-size:15px;margin:0 0 8px;color:var(--blue)}
   .lcard p{font-size:13.5px;color:var(--ink-soft);margin:0 0 7px;line-height:1.45}
@@ -229,6 +236,19 @@
     .tile.a,.tile.b,.tile.tall,.gnote{grid-column:1}
     .tile.a{grid-row:1}.tile.b{grid-row:2}.tile.tall{grid-row:3}.gnote{grid-row:4}
   }
+  /* mobile: move The Journey down to just before Getting There & Around */
+  @media (max-width:800px){
+    body{display:flex;flex-direction:column}
+    .hero{order:0}
+    .section:nth-of-type(2){order:1}   /* The Stops */
+    .section:nth-of-type(3){order:2}   /* Eat & play CTA */
+    .section:nth-of-type(1){order:3}   /* The Journey */
+    .section:nth-of-type(4){order:4}   /* Getting There & Around */
+    .section:nth-of-type(5){order:5}   /* Before You Go */
+    .section:nth-of-type(6){order:6}   /* Appendix */
+    .section:nth-of-type(7){order:7}   /* The Two of You */
+    footer{order:8}
+  }
 </style>
 </head>
 <body>
@@ -246,9 +266,9 @@
   <svg class="spark t s7" style="width:13px;top:150px;left:40%"><use href="#spk"/></svg>
   <svg class="spark w s8" style="width:16px;bottom:90px;right:40%"><use href="#spk"/></svg>
   <div class="wrap hero-inner">
-    <div class="hero-kicker">A Celebration · July 27 – 31, 2026</div>
-    <h1 class="hero-title">Jessica's Birthday<br>Celebration <span class="yr num">2026</span></h1>
-    <p class="hero-sub">A night with Billy Strings, a tour through the Northeast, and a couple of nights in downtown Boston.</p>
+    <div class="hero-kicker">Her Birthday · July 27 – 31, 2026</div>
+    <h1 class="hero-title">A Party For <span class="yr">Jessica!</span></h1>
+    <p class="hero-sub">Anchored by a night with Billy Strings, we do a run through the northeast part of the US, stopping along old Massachusetts in Sturbridge, for the old colonial feels… then we grab a spot to catch Billy throw down in Hartford. Then we head back to the harbor and spend a couple nights enjoying the city and its historic ways. A birthday celebration to be remembered!</p>
     <div class="hero-route">Jacksonville → Boston → Hartford → Boston</div>
   </div>
 </header>
@@ -321,6 +341,20 @@
         </div>
       </article>
 
+      <article class="card pcard reveal">
+        <div class="ph"><img src="photos/rowes.webp" alt="Plated seafood and wine at Rowes Wharf Sea Grille" loading="lazy"></div>
+        <div class="body">
+          <div class="e">Thu Jul 30 · The Celebration Dinner · Boston</div>
+          <h3>Rowes Wharf Sea Grille</h3>
+          <p class="why">The big dinner of the trip — harbor-view seafood at the Boston Harbor Hotel, oysters to start and the good bottle, a short walk down the waterfront from the Harborside.</p>
+          <span class="flag">Reserved for two — just show up hungry at eight.</span>
+          <div class="stats">
+            <span class="badge ok"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Reserved</span>
+            <span class="pill">Thu · 8:00 PM</span>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -348,17 +382,10 @@
         <p>Out <b>Mon 7/27</b>: JAX 12:24 → BOS 3:15. Back <b>Fri 7/31</b>: BOS 8:50 → JAX 11:44.</p>
       </div>
       <div class="lcard reveal">
-        <h4>The Car</h4>
-        <p>Pick up at <b>Logan</b> on arrival; you only need it through Wednesday.</p>
-        <p><b>Drop it downtown</b> near the hotel Wednesday — confirm no one-way fee.</p>
-        <p class="or">— or —</p>
-        <p>Return to Logan, then the <b>Blue Line two stops</b> to Aquarium.</p>
-      </div>
-      <div class="lcard reveal">
         <h4>The City</h4>
         <p>Walk and Uber the Boston nights — everything's close.</p>
         <p>Logan ↔ Waterfront on the <b>Blue Line</b> is about 15 minutes.</p>
-        <p>Skip the airport car line — the T drops you near the door.</p>
+        <p>From the airport, the T drops you right near the door.</p>
       </div>
     </div>
   </div>
@@ -377,13 +404,9 @@
       <div class="ck done reveal"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
         <div class="body"><div class="n">04 · DONE</div><div class="t">Publick House confirmed</div><div class="d">Sturbridge, Mon 7/27. Booked via Algotels.</div></div></div>
       <div class="ck reveal"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div class="body"><div class="n">05</div><div class="t">Reserve the rental car — pick up at Logan</div><div class="d">Compare Costco Travel against the agency sites. Decline their insurance if a card already covers it.</div></div></div>
+        <div class="body"><div class="n">05</div><div class="t">Sort departure day</div><div class="d">Fri 8:50 AM flight — be at Logan by ~7 AM. Aquarium Blue Line → Airport, ~15 min, or Uber.</div></div></div>
       <div class="ck reveal"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div class="body"><div class="n">06</div><div class="t">Plan the Wednesday car drop</div><div class="d">Drop downtown near the hotel (confirm no one-way fee), or return to Logan and ride the Blue Line to Aquarium.</div></div></div>
-      <div class="ck reveal"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div class="body"><div class="n">07</div><div class="t">Sort departure day</div><div class="d">Fri 8:50 AM flight — be at Logan by ~7 AM. Aquarium Blue Line → Airport, ~15 min, or Uber.</div></div></div>
-      <div class="ck reveal"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div class="body"><div class="n">08</div><div class="t">Load the tickets in your wallet</div><div class="d">Billy Strings tickets in the wallet app before you leave; confirm the gate and start time on the arena's site.</div></div></div>
+        <div class="body"><div class="n">06</div><div class="t">Load the tickets in your wallet</div><div class="d">Billy Strings tickets in the wallet app before you leave; confirm the gate and start time on the arena's site.</div></div></div>
     </div>
   </div>
 </section>
@@ -410,6 +433,10 @@
       <div class="led-row">
         <div class="led-what"><span class="led-when">Wed–Thu Jul 29–30</span><span class="led-name">Harborside Inn</span><span class="led-sub">Boston, MA · booked through Trivago</span></div>
         <div class="led-no"><span class="led-lab">Booking #</span><span class="led-code num">10000002</span></div>
+      </div>
+      <div class="led-row">
+        <div class="led-what"><span class="led-when">Thu Jul 30</span><span class="led-name">Rowes Wharf Sea Grille</span><span class="led-sub">Boston Harbor Hotel · the birthday dinner · table for two</span></div>
+        <div class="led-no"><span class="led-lab">Reservation</span><span class="led-code pending">8:00 PM</span></div>
       </div>
     </div>
     <p class="led-foot">Keep this handy at check-in. The Delta numbers are ticket numbers; boarding passes live in the Fly Delta app once you check in at the 24-hour mark.</p>
